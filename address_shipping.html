@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.theme.default.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Start: Header -->
+    <header>
+        <div class="d-none d-md-block bg-light">
+            <div class="container-md">
+                <div class="d-flex bd-highlight color-default">
+                    <div class="p-2 bd-highlight"><a href="" class="link-default">Giới thiệu</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="" class="link-default">Lịch sử giao dịch</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="" class="link-default">Kiểm tra đơn hàng</a></div>
+                    <div class="ms-auto p-2 bd-highlight"><a href="" class="link-default">Đăng ký</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="" class="link-default">Đăng nhập</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block container-md">
+            <div class="row">
+                <div class="col-1">
+                    <a href="/"><img src="assets/img/logo.png" alt="Logo" width="100"></a>
+                </div>
+                <div class="col-10 my-auto">
+                    <form class="row" action="" method="get">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Tìm kiếm sách..."
+                                aria-label="Tìm kiếm sách..." aria-describedby="btnSearch">
+                            <button class="btn btn-outline-success" type="submit" id="btnSearch"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-1 my-auto">
+                    <button type="button" class="btn position-relative" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                        <i class="fa-sharp fa-2xl fa-solid fa-bag-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+
+                            <span class="visually-hidden">0</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-default">
+            <div class="container-md">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button type="button" class="btn position-relative d-md-none d-block">
+                    <i class="fa-sharp fa-2xl fa-solid fa-bag-shopping text-white"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+
+                        <span class="visually-hidden">0</span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav d-flex justify-content-evenly w-100">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="product.html" id="navbarCategory" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">DANH MỤC SÁCH</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarCategory">
+                                <li><a class="dropdown-item" href="product.html">Item #1</a></li>
+                                <li><a class="dropdown-item" href="product.html">Item #2</a></li>
+                                <li><a class="dropdown-item" href="product.html">Item #3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SÁCH BÁN CHẠY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CHƯƠNG TRÌNH KHUYẾN MÃI</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                GIẢM GIÁ ĐẶC BIỆT
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End: Header -->
+
+
+
+    <main>
+        <div class="container">
+            <h4 class="text-center mt-4">THÔNG TIN TÀI KHOẢN</h4>
+            <hr>
+            <div class="row">
+                <div class="col-md-3 mt-4">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a href="account.html"><i class="fa-regular fa-address-card me-3"></i>Thông tin tài
+                                khoản</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fa-regular fa-map me-3"></i>Danh sách địa chỉ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#"><i class="fa-solid fa-right-from-bracket me-3"></i>Đăng xuất</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-9 mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Start: address shipping -->
+                            <div class="my-3">
+                                <div class="d-flex justify-content-between"
+                                    style="background-color: rgb(172, 230, 115);">
+                                    <div class="ms-2">
+                                        <span>Minh Quân</span>
+                                        <span>(Địa chỉ mặc định)</span>
+                                    </div>
+                                    <div class="me-2">
+                                        <a data-bs-toggle="collapse"
+                                            onclick="show_view_address_shipping('view_address_shipping_1')"
+                                            href="#edit_address_shipping_1" role="button" aria-expanded="false"
+                                            aria-controls="edit_address_shipping_1">
+                                            <i class="fa-regular fa-pen-to-square me-2"></i>
+                                        </a>
+                                        <a href=""><i class="fa-regular fa-rectangle-xmark"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Start: form edit address shipping -->
+                                <div class="collapse mt-4" id="edit_address_shipping_1">
+                                    <form action="" method="post">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="txt_firstname"><i
+                                                    class="fa-regular fa-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="Nhập họ"
+                                                aria-label="Nhập họ" aria-describedby="txt_firstname">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="txt_lastname"><i
+                                                    class="fa-regular fa-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="Nhập tên"
+                                                aria-label="Nhập tên" aria-describedby="txt_lastname">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="txt_city"><i
+                                                    class="fa-regular fa-map"></i></label>
+                                            <select class="form-select" id="txt_city">
+                                                <option selected>Chọn thành phố</option>
+                                                <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Cần Thơ">Cần Thơ</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="txt_district"><i
+                                                    class="fa-regular fa-map"></i></label>
+                                            <select class="form-select" id="txt_district">
+                                                <option selected>Chọn quận/huyện</option>
+                                                <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Cần Thơ">Cần Thơ</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="txt_ward"><i
+                                                    class="fa-regular fa-map"></i></label>
+                                            <select class="form-select" id="txt_ward">
+                                                <option selected>Chọn phường/xã</option>
+                                                <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Cần Thơ">Cần Thơ</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"><i
+                                                    class="fa-solid fa-map-pin"></i></span>
+                                            <input type="text" class="form-control" placeholder="Địa chỉ"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"><i
+                                                    class="fa-solid fa-phone-volume"></i></span>
+                                            <input type="text" class="form-control" placeholder="Số điện thoại"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"><i
+                                                    class="fa-regular fa-note-sticky"></i></span>
+                                            <input type="text" class="form-control" placeholder="Ghi chú"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="is_default">
+                                            <label class="form-check-label" for="is_default">Đặt làm địa chỉ mặc
+                                                định</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Thêm mới</button>
+                                    </form>
+                                </div>
+                                <!-- End: form edit address shipping -->
+                                <div class="row" id="view_address_shipping_1">
+                                    <div class="col-md-4">
+                                        Địa chỉ
+                                    </div>
+                                    <div class="col-md-8">
+                                        5/11 Hạnh Thông, phường 3, Gò Vấp
+                                    </div>
+                                    <div class="col-md-4">
+                                        Số điện thoại
+                                    </div>
+                                    <div class="col-md-8">
+                                        0375716638
+                                    </div>
+                                    <div class="col-md-4">
+                                        Ghi chú
+                                    </div>
+                                    <div class="col-md-8">
+                                        Giao giờ hành chính mới lấy nha shipper!!! ahihi đồ ngu
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <div class="d-flex justify-content-between"
+                                    style="background-color: rgb(172, 230, 115);">
+                                    <div class="ms-2">
+                                        <span>Minh Quân</span>
+                                        <span>(Địa chỉ mặc định)</span>
+                                    </div>
+                                    <div class="me-2">
+                                        <a data-bs-toggle="collapse"
+                                            onclick="show_view_address_shipping('view_address_shipping_2')"
+                                            href="#edit_address_shipping_2" role="button" aria-expanded="false"
+                                            aria-controls="edit_address_shipping_2">
+                                            <i class="fa-regular fa-pen-to-square me-2"></i>
+                                        </a>
+                                        <a href=""><i class="fa-regular fa-rectangle-xmark"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Start: form edit address shipping -->
+                                <div class="collapse mt-4" id="edit_address_shipping_2">
+                                    <form action="" method="post">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="txt_firstname"><i
+                                                    class="fa-regular fa-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="Nhập họ"
+                                                aria-label="Nhập họ" aria-describedby="txt_firstname">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="txt_lastname"><i
+                                                    class="fa-regular fa-user"></i></span>
+                                            <input type="text" class="form-control" placeholder="Nhập tên"
+                                                aria-label="Nhập tên" aria-describedby="txt_lastname">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="txt_city"><i
+                                                    class="fa-regular fa-map"></i></label>
+                                            <select class="form-select" id="txt_city">
+                                                <option selected>Chọn thành phố</option>
+                                                <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Cần Thơ">Cần Thơ</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="txt_district"><i
+                                                    class="fa-regular fa-map"></i></label>
+                                            <select class="form-select" id="txt_district">
+                                                <option selected>Chọn quận/huyện</option>
+                                                <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Cần Thơ">Cần Thơ</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="txt_ward"><i
+                                                    class="fa-regular fa-map"></i></label>
+                                            <select class="form-select" id="txt_ward">
+                                                <option selected>Chọn phường/xã</option>
+                                                <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                <option value="Long An">Long An</option>
+                                                <option value="Cần Thơ">Cần Thơ</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"><i
+                                                    class="fa-solid fa-map-pin"></i></span>
+                                            <input type="text" class="form-control" placeholder="Địa chỉ"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"><i
+                                                    class="fa-solid fa-phone-volume"></i></span>
+                                            <input type="text" class="form-control" placeholder="Số điện thoại"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"><i
+                                                    class="fa-regular fa-note-sticky"></i></span>
+                                            <input type="text" class="form-control" placeholder="Ghi chú"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="is_default">
+                                            <label class="form-check-label" for="is_default">Đặt làm địa chỉ mặc
+                                                định</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Thêm mới</button>
+                                    </form>
+                                </div>
+                                <!-- End: form edit address shipping -->
+                                <div class="row" id="view_address_shipping_2">
+                                    <div class="col-md-4">
+                                        Địa chỉ
+                                    </div>
+                                    <div class="col-md-8">
+                                        5/11 Hạnh Thông, phường 3, Gò Vấp
+                                    </div>
+                                    <div class="col-md-4">
+                                        Số điện thoại
+                                    </div>
+                                    <div class="col-md-8">
+                                        0375716638
+                                    </div>
+                                    <div class="col-md-4">
+                                        Ghi chú
+                                    </div>
+                                    <div class="col-md-8">
+                                        Giao giờ hành chính mới lấy nha shipper!!! ahihi đồ ngu
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+                            <!--End: address shipping -->
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#btn_add_address_shipping" aria-expanded="false"
+                                aria-controls="btn_add_address_shipping">
+                                Thêm địa chỉ
+                            </button>
+                            <!-- Start: form add address shipping -->
+                            <div class="collapse mt-4" id="btn_add_address_shipping">
+                                <form action="" method="post">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="txt_firstname"><i
+                                                class="fa-regular fa-user"></i></span>
+                                        <input type="text" class="form-control" placeholder="Nhập họ"
+                                            aria-label="Nhập họ" aria-describedby="txt_firstname">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="txt_lastname"><i
+                                                class="fa-regular fa-user"></i></span>
+                                        <input type="text" class="form-control" placeholder="Nhập tên"
+                                            aria-label="Nhập tên" aria-describedby="txt_lastname">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="txt_city"><i
+                                                class="fa-regular fa-map"></i></label>
+                                        <select class="form-select" id="txt_city">
+                                            <option selected>Chọn thành phố</option>
+                                            <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                            <option value="Long An">Long An</option>
+                                            <option value="Cần Thơ">Cần Thơ</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="txt_district"><i
+                                                class="fa-regular fa-map"></i></label>
+                                        <select class="form-select" id="txt_district">
+                                            <option selected>Chọn quận/huyện</option>
+                                            <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                            <option value="Long An">Long An</option>
+                                            <option value="Cần Thơ">Cần Thơ</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="txt_ward"><i
+                                                class="fa-regular fa-map"></i></label>
+                                        <select class="form-select" id="txt_ward">
+                                            <option selected>Chọn phường/xã</option>
+                                            <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                            <option value="Long An">Long An</option>
+                                            <option value="Cần Thơ">Cần Thơ</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa-solid fa-map-pin"></i></span>
+                                        <input type="text" class="form-control" placeholder="Địa chỉ"
+                                            aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa-solid fa-phone-volume"></i></span>
+                                        <input type="text" class="form-control" placeholder="Số điện thoại"
+                                            aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"><i
+                                                class="fa-regular fa-note-sticky"></i></span>
+                                        <input type="text" class="form-control" placeholder="Ghi chú"
+                                            aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="is_default">
+                                        <label class="form-check-label" for="is_default">Đặt làm địa chỉ mặc
+                                            định</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                                </form>
+                            </div>
+                            <!-- End: form add address shipping -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Start: Footer -->
+    <footer class="bg-light">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex justify-content-center">
+                        <a href="/"><img src="assets/img/logo.png" alt="Logo" width="100"></a>
+                    </div>
+                    <div style="text-align: justify;">
+                        Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực
+                        tiếp tại văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mt-4">
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Giới
+                                thiệu</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Chính
+                                sách bảo mật</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Chính
+                                sách vận chuyển</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Hình
+                                thức
+                                thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 mt-4">
+                    <ul class="list-group ">
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Quy
+                                định
+                                đổi, trả và huỷ đơn hàng</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Hướng
+                                dẫn
+                                đặt hàng</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Liên
+                                hệ</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Thông
+                                báo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-default text-white mt-4">
+            <div class="row">
+                <div class="col-12" style="font-size: 12px;">© 2014 - Bản quyền của Công Ty Cổ Phần Văn Hoá và Truyền
+                    Thông Nhã Nam - nhanam.com.vn</div>
+                <div class="col-12" style="font-size: 12px;">Địa chỉ: 59 Đỗ Quang, phường Trung Hoà, quận Cầu Giấy, Hà
+                    Nội</div>
+                <div class="col-12" style="font-size: 12px;">Giấy ĐKKD số 0101603420 do Sở KH&ĐT TP Hà Nội cấp ngày 21
+                    tháng 1 năm 2005 sửa đổi lần 5 ngày 20/3/2013</div>
+            </div>
+        </div>
+    </footer>
+    <!-- End: Footer -->
+
+    <!-- Start: Offcanvas cart -->
+
+    <!-- End: Offcanvas cart -->
+
+
+    <!-- JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/jquery/js/jquery.min.js"></script>
+    <script src="assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <script>
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 5,
+                    nav: true,
+                    loop: true,
+                    margin: 20
+                }
+            }
+        })
+        })
+    </script>
+    <script>
+        function show_view_address_shipping(id) {
+            var a = document.getElementById(id);
+            if (a.style.display == 'none') {
+                a.style.display = 'flex';
+            }
+            else {
+                a.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

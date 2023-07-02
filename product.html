@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.theme.default.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="d-none d-md-block bg-light">
+            <div class="container-md">
+                <div class="d-flex bd-highlight color-root">
+                    <div class="p-2 bd-highlight"><a href="" class="link-root">Giới thiệu</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="" class="link-root">Lịch sử giao dịch</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="" class="link-root">Kiểm tra đơn hàng</a></div>
+                    <div class="ms-auto p-2 bd-highlight"><a href="" class="link-root">Đăng ký</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="" class="link-root">Đăng nhập</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block container-md">
+            <div class="row">
+                <div class="col-1">
+                    <a href="/"><img src="assets/img/logo.png" alt="Logo" width="100"></a>
+                </div>
+                <div class="col-10 my-auto">
+                    <form class="row" action="" method="get">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Tìm kiếm sách..."
+                                aria-label="Tìm kiếm sách..." aria-describedby="btnSearch">
+                            <button class="btn btn-outline-success" type="submit" id="btnSearch"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-1 my-auto">
+                    <button type="button" class="btn position-relative">
+                        <i class="fa-sharp fa-2xl fa-solid fa-bag-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+
+                            <span class="visually-hidden">0</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-root">
+            <div class="container-md">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button type="button" class="btn position-relative d-md-none d-block">
+                    <i class="fa-sharp fa-2xl fa-solid fa-bag-shopping text-white"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+
+                        <span class="visually-hidden">0</span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav d-flex justify-content-evenly w-100">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarCategory" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">DANH MỤC SÁCH</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarCategory">
+                                <li><a class="dropdown-item" href="html/product.html">Item #1</a></li>
+                                <li><a class="dropdown-item" href="#">Item #2</a></li>
+                                <li><a class="dropdown-item" href="#">Item #3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SÁCH BÁN CHẠY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CHƯƠNG TRÌNH KHUYẾN MÃI</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                GIẢM GIÁ ĐẶC BIỆT
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="bg-light">
+        <div class="container-md container-fluid py-4">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-dark">TRANG CHỦ</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-dark">DANH MỤC SẢN
+                                PHẨM</a></li>
+                        <li class="breadcrumb-item color-root" aria-current="page">ITEM 1</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-md-3 bg-white py-4 rounded">
+                        <h6>NHÓM SẢN PHẨM</h6>
+                        <hr>
+                        <h6>GIÁ</h6>
+                        <form action="">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">0đ-150,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">150,000đ-300,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">150,000đ-300,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">300,000đ-450,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">450,000đ-700,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">700,000đ trở lên</label>
+                            </div>
+                        </form>
+                        <hr>
+                        <h6>NHÀ CUNG CẤP</h6>
+                        <form action="">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Nhã Nam</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-9 bg-white">
+                        <!-- Start: Products -->
+                        <div class="row">
+                            <div class="col-3 p-md-3 p-2">
+                                <div class="card" style="width: 95%;">
+                                    <img src="assets/img/than_so_hoc.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Thần Số Học Ứng Dụng</h5>
+                                        <p class="card-text text-danger m-0" style="font-size: 25px;">59.000</p>
+                                        <p class="text-decoration-line-through">69.000</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="#" class="btn btn-root">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-3 p-md-3 p-2">
+                                <div class="card" style="width: 95%;">
+                                    <img src="assets/img/than_so_hoc.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Thần Số Học Ứng Dụng</h5>
+                                        <p class="card-text text-danger m-0" style="font-size: 25px;">59.000</p>
+                                        <p class="text-decoration-line-through">69.000</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="#" class="btn btn-root">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-md-3 p-2">
+                                <div class="card" style="width: 95%;">
+                                    <img src="assets/img/than_so_hoc.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Thần Số Học Ứng Dụng</h5>
+                                        <p class="card-text text-danger m-0" style="font-size: 25px;">59.000</p>
+                                        <p class="text-decoration-line-through">69.000</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="#" class="btn btn-root">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-md-3 p-2">
+                                <div class="card" style="width: 95%;">
+                                    <img src="assets/img/than_so_hoc.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Thần Số Học Ứng Dụng</h5>
+                                        <p class="card-text text-danger m-0" style="font-size: 25px;">59.000</p>
+                                        <p class="text-decoration-line-through">69.000</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="#" class="btn btn-root">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 p-md-3 p-2">
+                                <div class="card" style="width: 95%;">
+                                    <img src="assets/img/than_so_hoc.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Thần Số Học Ứng Dụng</h5>
+                                        <p class="card-text text-danger m-0" style="font-size: 25px;">59.000</p>
+                                        <p class="text-decoration-line-through">69.000</p>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="#" class="btn btn-root">Mua ngay</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End: Products -->
+                        <div class="d-flex justify-content-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                  <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                      <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Start: Footer -->
+    <footer class="bg-light border-top">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex justify-content-center">
+                        <a href="/"><img src="assets/img/logo.png" alt="Logo" width="100"></a>
+                    </div>
+                    <div style="text-align: justify;">
+                        Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực
+                        tiếp tại văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mt-4">
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 border-bottom color-root"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-root">Giới
+                                thiệu</a></li>
+                        <li class="list-group-item border-0 border-bottom color-root"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-root">Chính
+                                sách bảo mật</a></li>
+                        <li class="list-group-item border-0 border-bottom color-root"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-root">Chính
+                                sách vận chuyển</a></li>
+                        <li class="list-group-item border-0 border-bottom color-root"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-root">Hình thức
+                                thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 mt-4">
+                    <ul class="list-group ">
+                        <li class="list-group-item border-0 border-bottom color-root"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-root">Quy định
+                                đổi, trả và huỷ đơn hàng</a></li>
+                        <li class="list-group-item border-0 border-bottom color-root"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-root">Hướng dẫn
+                                đặt hàng</a></li>
+                        <li class="list-group-item border-0 border-bottom color-root"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-root">Liên
+                                hệ</a></li>
+                        <li class="list-group-item border-0 border-bottom color-root"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-root">Thông
+                                báo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-root text-white mt-4">
+            <div class="row">
+                <div class="col-12" style="font-size: 12px;">© 2014 - Bản quyền của Công Ty Cổ Phần Văn Hoá và Truyền
+                    Thông Nhã Nam - nhanam.com.vn</div>
+                <div class="col-12" style="font-size: 12px;">Địa chỉ: 59 Đỗ Quang, phường Trung Hoà, quận Cầu Giấy, Hà
+                    Nội</div>
+                <div class="col-12" style="font-size: 12px;">Giấy ĐKKD số 0101603420 do Sở KH&ĐT TP Hà Nội cấp ngày 21
+                    tháng 1 năm 2005 sửa đổi lần 5 ngày 20/3/2013</div>
+            </div>
+        </div>
+    </footer>
+    <!-- End: Footer -->
+
+    <!-- JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/jquery/js/jquery.min.js"></script>
+    <script src="assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+</body>
+
+</html>
