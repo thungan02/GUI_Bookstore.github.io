@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.theme.default.min.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Start: Header -->
+    <header>
+        <div class="d-none d-md-block bg-light">
+            <div class="container-md">
+                <div class="d-flex bd-highlight color-default">
+                    <div class="p-2 bd-highlight"><a href="introduce.html" class="link-default">Giới thiệu</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="account.html" class="link-default">Lịch sử giao dịch</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="account.html" class="link-default">Kiểm tra đơn hàng</a></div>
+                    <div class="ms-auto p-2 bd-highlight"><a href="register.html" class="link-default">Đăng ký</a></div>
+                    <div class="p-2 bd-highlight">|</div>
+                    <div class="p-2 bd-highlight"><a href="register.html" class="link-default">Đăng nhập</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-md-block container-md">
+            <div class="row">
+                <div class="col-1">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="Logo" width="100"></a>
+                </div>
+                <div class="col-10 my-auto">
+                    <form class="row" action="" method="get">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="Tìm kiếm sách..."
+                                aria-label="Tìm kiếm sách..." aria-describedby="btnSearch">
+                            <button class="btn btn-outline-success" type="submit" id="btnSearch"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-1 my-auto">
+                    <a href="#offcanvasCart" role="button" class="position-relative" data-bs-toggle="offcanvas" aria-controls="offcanvasCart">
+                        <i class="fa-sharp fa-2xl fa-solid fa-bag-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+
+                            <span class="visually-hidden">0</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-default">
+            <div class="container-md">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button type="button" class="btn position-relative d-md-none d-block">
+                    <i class="fa-sharp fa-2xl fa-solid fa-bag-shopping text-white"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+
+                        <span class="visually-hidden">0</span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav d-flex justify-content-evenly w-100">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="product.html" id="navbarCategory" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">DANH MỤC SÁCH</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarCategory">
+                                <li><a class="dropdown-item" href="product.html">Item #1</a></li>
+                                <li><a class="dropdown-item" href="product.html">Item #2</a></li>
+                                <li><a class="dropdown-item" href="product.html">Item #3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">SÁCH BÁN CHẠY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CHƯƠNG TRÌNH KHUYẾN MÃI</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                GIẢM GIÁ ĐẶC BIỆT
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: body -->
+    <main class="bg-light">
+        <div class="container-md container-fluid py-4">
+            <div class="row mt-5">
+                <div class="col-md-8 bg-white p-3 rounded-3">
+                    <h5>THANH TOÁN</h5>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Chọn địa chỉ</option>
+                        <option value="Thêm địa chỉ mới">Thêm địa chỉ mới</option>
+                        <option value="5/11 Hạnh Thông, phường 3, Gò Vấp">5/11 Hạnh Thông, phường 3, Gò Vấp</option>
+                        <option value="184 Đướng số 6, phường 7, Gò Vấp">184 Đướng số 6, phường 7, Gò Vấp</option>
+                    </select>
+
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <select class="form-select" id="province" aria-label="Default select example">
+                                <option selected>Chọn thành phố</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" id="district" aria-label="Default select example">
+                                <option selected>Chọn quận/huyện</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select" id="ward" aria-label="Default select example">
+                                <option selected>Chọn phường/xã</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <label for="txt_address_detail" class="form-label">Tên người nhận</label>
+                        <input type="text" class="form-control" id="txt_name" aria-describedby=""
+                            placeholder="Tên người nhận">
+                        <div id="emailHelp" class="form-text">Không để trống</div>
+                    </div>
+                    <div class="mt-3">
+                        <label for="txt_address_detail" class="form-label">Số điện thoại</label>
+                        <input type="text" class="form-control" id="txt_phone" aria-describedby=""
+                            placeholder="Số điện thoại">
+                        <div id="emailHelp" class="form-text">Không để trống</div>
+                    </div>
+
+                    <div class="mt-3">
+                        <label for="txt_address_detail" class="form-label">Nhập địa chỉ cụ thể</label>
+                        <input type="text" class="form-control" id="txt_address_detail" aria-describedby=""
+                            placeholder="Địa chỉ cụ thể">
+                        <div id="emailHelp" class="form-text">Không để trống</div>
+                    </div>
+
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h5>Phương thức giao hàng</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rad_type_delivery"
+                                            id="rad_01">
+                                        <label class="form-check-label" for="rad_01">
+                                            <i class="fa-solid fa-shop me-2"></i> Nhận hàng trực tiếp tại cửa hàng
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rad_type_delivery"
+                                            id="rad_02" checked>
+                                        <label class="form-check-label" for="rad_02">
+                                            <i class="fa-solid fa-truck me-2"></i> Giao hàng tận nơi
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Phương thức thanh toán</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rad_type_delivery"
+                                            id="rad_transfer">
+                                        <label class="form-check-label" for="rad_transfer">
+                                            <i class="fa-regular fa-credit-card me-2"></i> Chuyển khoản
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="rad_type_delivery"
+                                            id="rad_cash" checked>
+                                        <label class="form-check-label" for="rad_cash">
+                                            <i class="fa-solid fa-dollar-sign me-2"></i> Thanh toán khi nhận hàng
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-default hvr-sweep-to-left w-100 mt-4">THANH TOÁN</button>
+                </div>
+                <div class="col-md-4 bg-white p-3 rounded-3">
+                    <h6><i class="fa-solid fa-ticket me-4"></i>SẢN PHẨM</h6>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <img src="assets/img/than_so_hoc.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 d-flex flex-column">
+                            <div><b>Thần số học ứng dụng</b></div>
+                            <div class="my-2">
+                                <span class="px-2 rounded-3" style="background-color: rgb(220, 245, 222);">1</span>
+                            </div>
+                            <div>
+                                <span class="fw-bold text-danger h5">59.000</span>
+                                <span class="text-decoration-line-through">69.000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <img src="assets/img/muon-kiep-nhan-sinh-phan-3-8.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-8 d-flex flex-column">
+                            <div><b>Muôn kiếp nhân sinh</b></div>
+                            <div class="my-2">
+                                <span class="px-2 rounded-3" style="background-color: rgb(220, 245, 222);">1</span>
+                            </div>
+                            <div>
+                                <span class="fw-bold text-danger h5">59.000</span>
+                                <span class="text-decoration-line-through">69.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h6><i class="fa-solid fa-ticket me-4"></i>KHUYẾN MÃI</h6>
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Mã giảm giá..."
+                            aria-label="Mã giảm giá..." aria-describedby="btnSearch">
+                        <button class="btn btn-outline-success" type="submit" id="btnSearch"> Áp dụng</button>
+                    </div>
+                    <div>
+                        <h6 class="mt-5"><i class="fa-solid fa-money-bill me-4"></i>THÀNH TIỀN</h6>
+                        <hr>
+                        <div>
+                            <span>Tổng tiền</span>
+                            <span class="float-end">123.000đ</span>
+                        </div>
+                        <div>
+                            <span>Giảm giá</span>
+                            <span class="float-end">23.000đ</span>
+                        </div>
+                        <div>
+                            <span>Vận chuyển</span>
+                            <span class="float-end">30.000đ</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span>TỔNG TIỀN THANH TOÁN</span>
+                            <span class="float-end text-danger h3">130.000đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End: body -->
+
+
+
+    <!-- Start: Footer -->
+    <footer class="bg-light">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex justify-content-center">
+                        <a href="/"><img src="assets/img/logo.png" alt="Logo" width="100"></a>
+                    </div>
+                    <div style="text-align: justify;">
+                        Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực
+                        tiếp tại văn phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mt-4">
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Giới
+                                thiệu</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Chính
+                                sách bảo mật</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Chính
+                                sách vận chuyển</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Hình
+                                thức
+                                thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 mt-4">
+                    <ul class="list-group ">
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Quy
+                                định
+                                đổi, trả và huỷ đơn hàng</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Hướng
+                                dẫn
+                                đặt hàng</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Liên
+                                hệ</a></li>
+                        <li class="list-group-item border-0 border-bottom color-default"><i
+                                class="fa-solid fa-circle-chevron-right me-3"></i><a href="" class="link-default">Thông
+                                báo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-default text-white mt-4">
+            <div class="row">
+                <div class="col-12" style="font-size: 12px;">© 2014 - Bản quyền của Công Ty Cổ Phần Văn Hoá và Truyền
+                    Thông Nhã Nam - nhanam.com.vn</div>
+                <div class="col-12" style="font-size: 12px;">Địa chỉ: 59 Đỗ Quang, phường Trung Hoà, quận Cầu Giấy, Hà
+                    Nội</div>
+                <div class="col-12" style="font-size: 12px;">Giấy ĐKKD số 0101603420 do Sở KH&ĐT TP Hà Nội cấp ngày 21
+                    tháng 1 năm 2005 sửa đổi lần 5 ngày 20/3/2013</div>
+            </div>
+        </div>
+    </footer>
+    <!-- End: Footer -->
+
+    <!-- Start: Offcanvas cart -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCartLabel">GIỎ HÀNG</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/img/muon-kiep-nhan-sinh-phan-3-8.jpg" class="img-fluid" alt="Ảnh sản phẩm">
+                        </div>
+                        <div class="col-md-7">
+                            <h6>Muôn kiếp nhân sinh</h6>
+                            <span class="px-2 rounded-3" style="background-color: rgb(220, 245, 222);">1</span>
+                            <span class="ms-3">55.000</span>
+                        </div>
+                        <div class="col-md-1">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <img src="assets/img/muon-kiep-nhan-sinh-phan-3-8.jpg" class="img-fluid" alt="Ảnh sản phẩm">
+                        </div>
+                        <div class="col-md-7">
+                            <h6>Muôn kiếp nhân sinh</h6>
+                            <span class="px-2 rounded-3" style="background-color: rgb(220, 245, 222);">1</span>
+                            <span class="ms-3">55.000</span>
+                        </div>
+                        <div class="col-md-1">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <img src="assets/img/muon-kiep-nhan-sinh-phan-3-8.jpg" class="img-fluid" alt="Ảnh sản phẩm">
+                        </div>
+                        <div class="col-md-7">
+                            <h6>Muôn kiếp nhân sinh</h6>
+                            <span class="px-2 rounded-3" style="background-color: rgb(220, 245, 222);">1</span>
+                            <span class="ms-3">55.000</span>
+                        </div>
+                        <div class="col-md-1">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <hr>
+                </div>
+                <div class="col-md-12">
+                    <span>TỔNG TIỀN</span>
+                    <span class="float-end">123.000đ</span>
+                </div>
+                <div class="col-md-6 my-3">
+                    <a href="#" class="btn btn-outline-default hvr-sweep-to-left w-100">XEM GIỎ HÀNG</a>
+                </div>
+                <div class="col-md-6 my-3">
+                    <a href="#" class="btn btn-outline-default hvr-sweep-to-left w-100">THANH TOÁN</a>
+                </div>
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-outline-default hvr-sweep-to-left w-100">TIẾP TỤC MUA HÀNG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End: Offcanvas cart -->
+
+    <!-- JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/jquery/js/jquery.min.js"></script>
+    <script src="assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="assets/js/axios.min.js"></script>
+    <script src="assets/js/call-api-province.js"></script>
+</body>
+
+</html>

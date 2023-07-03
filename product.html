@@ -19,25 +19,26 @@
 </head>
 
 <body>
+    <!-- Start: Header -->
     <header>
         <div class="d-none d-md-block bg-light">
             <div class="container-md">
-                <div class="d-flex bd-highlight color-root">
-                    <div class="p-2 bd-highlight"><a href="" class="link-root">Giới thiệu</a></div>
+                <div class="d-flex bd-highlight color-default">
+                    <div class="p-2 bd-highlight"><a href="introduce.html" class="link-default">Giới thiệu</a></div>
                     <div class="p-2 bd-highlight">|</div>
-                    <div class="p-2 bd-highlight"><a href="" class="link-root">Lịch sử giao dịch</a></div>
+                    <div class="p-2 bd-highlight"><a href="account.html" class="link-default">Lịch sử giao dịch</a></div>
                     <div class="p-2 bd-highlight">|</div>
-                    <div class="p-2 bd-highlight"><a href="" class="link-root">Kiểm tra đơn hàng</a></div>
-                    <div class="ms-auto p-2 bd-highlight"><a href="" class="link-root">Đăng ký</a></div>
+                    <div class="p-2 bd-highlight"><a href="account.html" class="link-default">Kiểm tra đơn hàng</a></div>
+                    <div class="ms-auto p-2 bd-highlight"><a href="register.html" class="link-default">Đăng ký</a></div>
                     <div class="p-2 bd-highlight">|</div>
-                    <div class="p-2 bd-highlight"><a href="" class="link-root">Đăng nhập</a></div>
+                    <div class="p-2 bd-highlight"><a href="register.html" class="link-default">Đăng nhập</a></div>
                 </div>
             </div>
         </div>
         <div class="d-none d-md-block container-md">
             <div class="row">
                 <div class="col-1">
-                    <a href="/"><img src="assets/img/logo.png" alt="Logo" width="100"></a>
+                    <a href="index.html"><img src="assets/img/logo.png" alt="Logo" width="100"></a>
                 </div>
                 <div class="col-10 my-auto">
                     <form class="row" action="" method="get">
@@ -50,17 +51,17 @@
                     </form>
                 </div>
                 <div class="col-1 my-auto">
-                    <button type="button" class="btn position-relative">
+                    <a href="#offcanvasCart" role="button" class="position-relative" data-bs-toggle="offcanvas" aria-controls="offcanvasCart">
                         <i class="fa-sharp fa-2xl fa-solid fa-bag-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+
                             <span class="visually-hidden">0</span>
                         </span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-root">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-default">
             <div class="container-md">
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -77,15 +78,15 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav d-flex justify-content-evenly w-100">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">TRANG CHỦ</a>
+                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarCategory" role="button"
+                            <a class="nav-link dropdown-toggle" href="product.html" id="navbarCategory" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">DANH MỤC SÁCH</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarCategory">
-                                <li><a class="dropdown-item" href="html/product.html">Item #1</a></li>
-                                <li><a class="dropdown-item" href="#">Item #2</a></li>
-                                <li><a class="dropdown-item" href="#">Item #3</a></li>
+                                <li><a class="dropdown-item" href="product.html">Item #1</a></li>
+                                <li><a class="dropdown-item" href="product.html">Item #2</a></li>
+                                <li><a class="dropdown-item" href="product.html">Item #3</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -110,6 +111,7 @@
             </div>
         </nav>
     </header>
+    <!-- End: Header -->
 
 
     <main class="bg-light">
